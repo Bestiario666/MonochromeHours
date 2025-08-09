@@ -174,58 +174,196 @@
   </section>
 
   <!-- ==================== TRACKLIST (INTERACTIVE) ==================== -->
-  <section class="relative isolate py-20 bg-[color:var(--ink-2)] overflow-hidden" 
-           style="--bg:url(https://i.imgur.com/iH6pCLJ.png)">
+ <!-- ==================== TRACKLIST (MINIMAL, 2 COLUMNS, 20 TRACKS) ==================== -->
+<section class="relative isolate py-20 bg-[color:var(--ink-2)] overflow-hidden"
+         style="--bg:url(https://i.imgur.com/iH6pCLJ.png)">
 
-    <!-- Background image with parallax -->
-    <div class="absolute inset-0 z-0 tracklist-bg"></div>
+  <!-- Background image with parallax -->
+  <div class="absolute inset-0 z-0 tracklist-bg"></div>
+  <!-- Lighting sweep effect -->
+  <div class="absolute inset-0 z-0 lighting"></div>
+  <!-- Dark overlay for readability -->
+  <div class="absolute inset-0 z-0 bg-black/60"></div>
 
-    <!-- Lighting sweep effect -->
-    <div class="absolute inset-0 z-0 lighting"></div>
+  <div class="container mx-auto px-6 max-w-5xl relative z-10">
+    <h2 class="text-3xl font-semibold">Tracklist</h2>
 
-    <!-- Dark overlay for readability -->
-    <div class="absolute inset-0 z-0 bg-black/60"></div>
-
-    <div class="container mx-auto px-6 max-w-3xl relative z-10">
-      <h2 class="text-3px md:text-3xl font-semibold">Tracklist</h2>
-      <ul class="mt-6 divide-y divide-white/10" id="trackList">
-        <li class="py-4 flex items-center gap-4">
-          <button class="w-10 h-10 rounded-full bg-white/10 grid place-items-center hover:bg-white/15"
-                  data-audio="/audio/dawn_30s.mp3" aria-label="Play Dawn"><i class="fa-solid fa-play"></i></button>
-          <div class="min-w-0">
-            <p class="font-medium">1. Dawn</p>
-            <p class="text-sm text-white/60">Felt piano, radio motif • 0:30 preview</p>
-          </div>
-          <a href="#" class="ml-auto text-[color:var(--gold)] hover:underline">Save ↗</a>
+    <!-- Wrapper keeps old JS selector working -->
+    <div id="trackList" class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-x-10">
+      <!-- Column A (1–10) -->
+      <ul class="divide-y divide-white/10">
+        <li class="py-2 flex items-center gap-3">
+          <button class="w-8 h-8 rounded-full bg-white/10 grid place-items-center hover:bg-white/15"
+                  data-audio="/audio/01_dawn_30s.mp3" aria-label="Play Dawn">
+            <i class="fa-solid fa-play text-xs"></i>
+          </button>
+          <span class="truncate text-sm flex-1">1. Dawn</span>
+          <span class="text-xs font-mono text-white/60">3:12</span>
         </li>
-
-        <li class="py-4 flex items-center gap-4">
-          <button class="w-10 h-10 rounded-full bg-white/10 grid place-items-center hover:bg-white/15"
-                  data-audio="/audio/monochrome_hours_30s.mp3" aria-label="Play Monochrome Hours"><i class="fa-solid fa-play"></i></button>
-          <div class="min-w-0">
-            <p class="font-medium">2. Monochrome Hours</p>
-            <p class="text-sm text-white/60">Downtempo, felt textures • 0:30 preview</p>
-          </div>
-          <a href="#" class="ml-auto text-[color:var(--gold)] hover:underline">Save ↗</a>
+        <li class="py-2 flex items-center gap-3">
+          <button class="w-8 h-8 rounded-full bg-white/10 grid place-items-center hover:bg-white/15"
+                  data-audio="/audio/02_monochrome_hours_30s.mp3" aria-label="Play Monochrome Hours">
+            <i class="fa-solid fa-play text-xs"></i>
+          </button>
+          <span class="truncate text-sm flex-1">2. Monochrome Hours</span>
+          <span class="text-xs font-mono text-white/60">4:18</span>
         </li>
-
-        <li class="py-4 flex items-center gap-4">
-          <button class="w-10 h-10 rounded-full bg-white/10 grid place-items-center hover:bg-white/15"
-                  data-audio="/audio/tram_crossroads_30s.mp3" aria-label="Play Tram Crossroads"><i class="fa-solid fa-play"></i></button>
-          <div class="min-w-0">
-            <p class="font-medium">3. Tram Crossroads</p>
-            <p class="text-sm text-white/60">Ostinatos in drizzle • 0:30 preview</p>
-          </div>
-          <a href="#" class="ml-auto text-[color:var(--gold)] hover:underline">Save ↗</a>
+        <li class="py-2 flex items-center gap-3">
+          <button class="w-8 h-8 rounded-full bg-white/10 grid place-items-center hover:bg-white/15"
+                  data-audio="/audio/03_tram_crossroads_30s.mp3" aria-label="Play Tram Crossroads">
+            <i class="fa-solid fa-play text-xs"></i>
+          </button>
+          <span class="truncate text-sm flex-1">3. Tram Crossroads</span>
+          <span class="text-xs font-mono text-white/60">3:47</span>
+        </li>
+        <li class="py-2 flex items-center gap-3">
+          <button class="w-8 h-8 rounded-full bg-white/10 grid place-items-center hover:bg-white/15"
+                  data-audio="/audio/04_neon_shadows_30s.mp3" aria-label="Play Neon Shadows">
+            <i class="fa-solid fa-play text-xs"></i>
+          </button>
+          <span class="truncate text-sm flex-1">4. Neon Shadows</span>
+          <span class="text-xs font-mono text-white/60">5:12</span>
+        </li>
+        <li class="py-2 flex items-center gap-3">
+          <button class="w-8 h-8 rounded-full bg-white/10 grid place-items-center hover:bg-white/15"
+                  data-audio="/audio/05_quiet_between_30s.mp3" aria-label="Play The Quiet Between">
+            <i class="fa-solid fa-play text-xs"></i>
+          </button>
+          <span class="truncate text-sm flex-1">5. The Quiet Between</span>
+          <span class="text-xs font-mono text-white/60">3:27</span>
+        </li>
+        <li class="py-2 flex items-center gap-3">
+          <button class="w-8 h-8 rounded-full bg-white/10 grid place-items-center hover:bg-white/15"
+                  data-audio="/audio/06_fading_echo_30s.mp3" aria-label="Play Fading Echo">
+            <i class="fa-solid fa-play text-xs"></i>
+          </button>
+          <span class="truncate text-sm flex-1">6. Fading Echo</span>
+          <span class="text-xs font-mono text-white/60">6:08</span>
+        </li>
+        <li class="py-2 flex items-center gap-3">
+          <button class="w-8 h-8 rounded-full bg-white/10 grid place-items-center hover:bg-white/15"
+                  data-audio="/audio/07_midnight_prelude_30s.mp3" aria-label="Play Midnight Prelude">
+            <i class="fa-solid fa-play text-xs"></i>
+          </button>
+          <span class="truncate text-sm flex-1">7. Midnight Prelude</span>
+          <span class="text-xs font-mono text-white/60">2:59</span>
+        </li>
+        <li class="py-2 flex items-center gap-3">
+          <button class="w-8 h-8 rounded-full bg-white/10 grid place-items-center hover:bg-white/15"
+                  data-audio="/audio/08_radio_window_30s.mp3" aria-label="Play Radio Window">
+            <i class="fa-solid fa-play text-xs"></i>
+          </button>
+          <span class="truncate text-sm flex-1">8. Radio Window</span>
+          <span class="text-xs font-mono text-white/60">3:21</span>
+        </li>
+        <li class="py-2 flex items-center gap-3">
+          <button class="w-8 h-8 rounded-full bg-white/10 grid place-items-center hover:bg-white/15"
+                  data-audio="/audio/09_glass_rain_30s.mp3" aria-label="Play Glass Rain">
+            <i class="fa-solid fa-play text-xs"></i>
+          </button>
+          <span class="truncate text-sm flex-1">9. Glass Rain</span>
+          <span class="text-xs font-mono text-white/60">4:01</span>
+        </li>
+        <li class="py-2 flex items-center gap-3">
+          <button class="w-8 h-8 rounded-full bg-white/10 grid place-items-center hover:bg-white/15"
+                  data-audio="/audio/10_station_murmur_30s.mp3" aria-label="Play Station Murmur">
+            <i class="fa-solid fa-play text-xs"></i>
+          </button>
+          <span class="truncate text-sm flex-1">10. Station Murmur</span>
+          <span class="text-xs font-mono text-white/60">2:44</span>
         </li>
       </ul>
-      <audio id="listAudio" preload="metadata"></audio>
 
-      <div class="text-center mt-8">
-        <a href="#" class="inline-block border border-white/20 px-6 py-2 rounded-full hover:bg-white/10">View full tracklist (12 songs)</a>
-      </div>
+      <!-- Column B (11–20) -->
+      <ul class="divide-y divide-white/10 mt-6 md:mt-0">
+        <li class="py-2 flex items-center gap-3">
+          <button class="w-8 h-8 rounded-full bg-white/10 grid place-items-center hover:bg-white/15"
+                  data-audio="/audio/11_sodium_lights_30s.mp3" aria-label="Play Sodium Lights">
+            <i class="fa-solid fa-play text-xs"></i>
+          </button>
+          <span class="truncate text-sm flex-1">11. Sodium Lights</span>
+          <span class="text-xs font-mono text-white/60">3:36</span>
+        </li>
+        <li class="py-2 flex items-center gap-3">
+          <button class="w-8 h-8 rounded-full bg-white/10 grid place-items-center hover:bg-white/15"
+                  data-audio="/audio/12_concrete_hum_30s.mp3" aria-label="Play Concrete Hum">
+            <i class="fa-solid fa-play text-xs"></i>
+          </button>
+          <span class="truncate text-sm flex-1">12. Concrete Hum</span>
+          <span class="text-xs font-mono text-white/60">4:09</span>
+        </li>
+        <li class="py-2 flex items-center gap-3">
+          <button class="w-8 h-8 rounded-full bg-white/10 grid place-items-center hover:bg-white/15"
+                  data-audio="/audio/13_flicker_30s.mp3" aria-label="Play Flicker">
+            <i class="fa-solid fa-play text-xs"></i>
+          </button>
+          <span class="truncate text-sm flex-1">13. Flicker</span>
+          <span class="text-xs font-mono text-white/60">3:05</span>
+        </li>
+        <li class="py-2 flex items-center gap-3">
+          <button class="w-8 h-8 rounded-full bg-white/10 grid place-items-center hover:bg-white/15"
+                  data-audio="/audio/14_afterimage_30s.mp3" aria-label="Play Afterimage">
+            <i class="fa-solid fa-play text-xs"></i>
+          </button>
+          <span class="truncate text-sm flex-1">14. Afterimage</span>
+          <span class="text-xs font-mono text-white/60">3:58</span>
+        </li>
+        <li class="py-2 flex items-center gap-3">
+          <button class="w-8 h-8 rounded-full bg-white/10 grid place-items-center hover:bg-white/15"
+                  data-audio="/audio/15_vapour_trail_30s.mp3" aria-label="Play Vapour Trail">
+            <i class="fa-solid fa-play text-xs"></i>
+          </button>
+          <span class="truncate text-sm flex-1">15. Vapour Trail</span>
+          <span class="text-xs font-mono text-white/60">4:22</span>
+        </li>
+        <li class="py-2 flex items-center gap-3">
+          <button class="w-8 h-8 rounded-full bg-white/10 grid place-items-center hover:bg-white/15"
+                  data-audio="/audio/16_subway_bells_30s.mp3" aria-label="Play Subway Bells">
+            <i class="fa-solid fa-play text-xs"></i>
+          </button>
+          <span class="truncate text-sm flex-1">16. Subway Bells</span>
+          <span class="text-xs font-mono text-white/60">2:51</span>
+        </li>
+        <li class="py-2 flex items-center gap-3">
+          <button class="w-8 h-8 rounded-full bg-white/10 grid place-items-center hover:bg-white/15"
+                  data-audio="/audio/17_static_interlude_30s.mp3" aria-label="Play Static Interlude">
+            <i class="fa-solid fa-play text-xs"></i>
+          </button>
+          <span class="truncate text-sm flex-1">17. Static Interlude</span>
+          <span class="text-xs font-mono text-white/60">1:58</span>
+        </li>
+        <li class="py-2 flex items-center gap-3">
+          <button class="w-8 h-8 rounded-full bg-white/10 grid place-items-center hover:bg-white/15"
+                  data-audio="/audio/18_empty_streets_30s.mp3" aria-label="Play Empty Streets">
+            <i class="fa-solid fa-play text-xs"></i>
+          </button>
+          <span class="truncate text-sm flex-1">18. Empty Streets</span>
+          <span class="text-xs font-mono text-white/60">3:33</span>
+        </li>
+        <li class="py-2 flex items-center gap-3">
+          <button class="w-8 h-8 rounded-full bg-white/10 grid place-items-center hover:bg-white/15"
+                  data-audio="/audio/19_last_tram_30s.mp3" aria-label="Play Last Tram">
+            <i class="fa-solid fa-play text-xs"></i>
+          </button>
+          <span class="truncate text-sm flex-1">19. Last Tram</span>
+          <span class="text-xs font-mono text-white/60">4:06</span>
+        </li>
+        <li class="py-2 flex items-center gap-3">
+          <button class="w-8 h-8 rounded-full bg-white/10 grid place-items-center hover:bg-white/15"
+                  data-audio="/audio/20_after_rain_30s.mp3" aria-label="Play After Rain">
+            <i class="fa-solid fa-play text-xs"></i>
+          </button>
+          <span class="truncate text-sm flex-1">20. After Rain</span>
+          <span class="text-xs font-mono text-white/60">3:41</span>
+        </li>
+      </ul>
     </div>
-  </section>
+
+    <!-- Shared audio element -->
+    <audio id="listAudio" preload="metadata"></audio>
+  </div>
+</section>
+
 
   <!-- ==================== ARTWORK ==================== -->
 <section class="relative py-20 bg-black overflow-hidden" 
